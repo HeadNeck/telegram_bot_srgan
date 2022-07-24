@@ -1,0 +1,8 @@
+venv
+__pycache__
+srgan/__pycache__
+
+.env
+
+lr
+sr
