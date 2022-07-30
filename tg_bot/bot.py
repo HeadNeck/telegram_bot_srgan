@@ -7,8 +7,8 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram import Bot, Dispatcher, types
 from datetime import datetime
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
-from constants import API_TOKEN, BOT_MSGS
-from keyboards import choose_model_kb, restart_kb
+from tg_bot.constants import API_TOKEN, BOT_MSGS
+from tg_bot.keyboards import choose_model_kb, restart_kb
 from aiogram.types import ReplyKeyboardRemove
 
 bot = Bot(token=API_TOKEN)

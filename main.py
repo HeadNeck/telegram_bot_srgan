@@ -2,11 +2,11 @@
 
 import os
 import threading
-from bot import dp
-from utils import create_dir, clean_folders
 from aiogram import executor
-from model_loops import sr_gan_loop, swinir_loop
-from constants import MODEL_NAMES, DIRECTORY_LR, DIRECTORY_SR
+from tg_bot.utils import create_dir, clean_folders
+from tg_bot.bot import dp
+from tg_bot.model_loops import sr_gan_loop, swinir_loop
+from tg_bot.constants import MODEL_NAMES, DIRECTORY_LR, DIRECTORY_SR
 
 
 

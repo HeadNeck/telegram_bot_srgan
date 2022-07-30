@@ -4,7 +4,7 @@ import os
 from time import sleep
 from srgan.inference import main as srgan_inf
 from argparse import Namespace
-from constants import DIRECTORY_LR, DIRECTORY_SR
+from tg_bot.constants import DIRECTORY_LR, DIRECTORY_SR
 from swinir.inference import main as swinir_inf
 
 
