@@ -26,17 +26,20 @@ class FSMUser(StatesGroup):
 @dp.message_handler(commands=['start'], state=None)
 async def load_models_menu(message: types.Message):
     await FSMUser.model_menu.set()
-    await message.reply(BOT_MSGS["model_menu"], reply_markup=choose_model_kb)
+    await message.reply(BOT_MSGS["model_menu"],
+                        reply_markup=choose_model_kb)
 
 @dp.message_handler(commands=['sr_gan'], state=FSMUser.model_menu)
 async def load_models_menu(message: types.Message, state: FSMContext):
     await FSMUser.sr_gan_wait_photo.set()
-    await message.reply(BOT_MSGS["photo_request"], reply_markup=ReplyKeyboardRemove())
+    await message.reply(BOT_MSGS["photo_request"],
+                        reply_markup=ReplyKeyboardRemove())
 
 @dp.message_handler(commands=['swinir'], state=FSMUser.model_menu)
 async def load_models_menu(message: types.Message, state: FSMContext):
     await FSMUser.swinir_wait_photo.set()
-    await message.reply(BOT_MSGS["photo_request"], reply_markup=ReplyKeyboardRemove())
+    await message.reply(BOT_MSGS["photo_request"],
+                        reply_markup=ReplyKeyboardRemove())
 
 async def work_with_model(model_name, message, state):
     chat_id = message.from_user.id
@@ -78,60 +81,3 @@ async def save_photo(message: types.Message, state: FSMContext):
 @dp.message_handler(content_types=['photo'], state=FSMUser.swinir_wait_photo)
 async def save_photo(message: types.Message, state: FSMContext):
     await work_with_model('swinir', message, state)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-###
