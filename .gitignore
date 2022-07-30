@@ -2,7 +2,7 @@ venv
 __pycache__
 srgan/__pycache__
 
-
-
 lr
 sr
+
+.env
