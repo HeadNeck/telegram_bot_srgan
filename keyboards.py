@@ -5,9 +5,13 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
 
-b1 = KeyboardButton('/sr_gan')
-b2 = KeyboardButton('/swinir')
+m1 = KeyboardButton('/sr_gan')
+m2 = KeyboardButton('/swinir')
 
 choose_model_kb = ReplyKeyboardMarkup(resize_keyboard=True)
-(choose_model_kb.add(b1)
-                .add(b2))
+(choose_model_kb.add(m1)
+                .add(m2))
+
+r1 = KeyboardButton('/start')
+restart_kb = ReplyKeyboardMarkup(resize_keyboard=True)
+restart_kb.add(r1)
