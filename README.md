@@ -11,7 +11,7 @@ py main.py
 
 # Общая информация:
 Бот предоставляет возможность воспользоваться моделями для super-resolution  
-На данный момент:
+На данный момент: (в данном репозитории представлены урезанные версии - только инференс)
 1. SRGan https://github.com/Lornatang/SRGAN-PyTorch
 2. SwinIR https://github.com/JingyunLiang/SwinIR
 
